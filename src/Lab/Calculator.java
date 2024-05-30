@@ -136,7 +136,7 @@ import java.awt.event.ActionListener;
                         if (num2 != 0)
                             result = num1 / num2;
                         else
-                            result = 0; // handle divide by zero
+                            result = 0; 
                         break;
                     case '%':
                         result = num1 * (num2 / 100);
