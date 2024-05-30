@@ -28,6 +28,7 @@ import java.awt.event.ActionListener;
             setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             setLocationRelativeTo(null);
             getContentPane().setBackground(Color.WHITE);
+
             textField = new JTextField();
             textField.setEditable(false);
             textField.setBackground(Color.BLACK);
@@ -148,8 +149,6 @@ import java.awt.event.ActionListener;
                         break;
                 }
                 textField.setText(String.valueOf(result));
-            } else if (command.equals("C")) {
-                textField.setText("");
             } else if (command.equals("DEL")) {
                 String currentText = textField.getText();
                 if (currentText.length() > 0) {
@@ -158,15 +157,12 @@ import java.awt.event.ActionListener;
             } else if (command.equals("AC")) {
 
 
-
                 textField.setText("");
-            } else if (command.equals("+/-")) {
-                if (!textField.getText().isEmpty()) {
-                    // Toggle the sign of the current value
-                    double value = Double.parseDouble(textField.getText());
-                    textField.setText(String.valueOf(-value));
-                }
-            } else if (command.equals("π")) {
+            }
+
+
+
+            else if (command.equals("π")) {
 
                 textField.setText(String.valueOf(Math.PI));
             } else {
